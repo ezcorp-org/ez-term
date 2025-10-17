@@ -1,0 +1,47 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo lock file (optional - some keep it for binaries)
+Cargo.lock
+
+# Configuration files (may contain sensitive data)
+.config/
+*.toml.bak
+
+# Binary outputs
+ez
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test files
+*.swp
+*.swo
+*~
+.DS_Store
+/tmp/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+.fleet/
+
+# OS files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Local history/cache
+.history/
+.cache/
+
+# Application-specific
+*.log
+
+# Don't ignore the shell integration scripts
+!ez.sh
+!ez.zsh
