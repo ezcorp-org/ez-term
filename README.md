@@ -15,26 +15,64 @@ Ask for what you want in natural language, get a safe command you can run.
 
 ## Installation
 
-### One-Line Install (Recommended)
+### ⚡ One Command Install (No Rust Required!)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/install-ez.sh | bash
+curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/install.sh | bash
 ```
 
-This will:
-- ✅ Install Rust/Cargo if needed
-- ✅ Build and install `ez` binary
-- ✅ Set up shell integration
-- ✅ Configure Ollama host
-- ✅ Add to your PATH
+**Works on:**
+- ✅ Linux (x86_64, ARM64)
+- ✅ macOS (Intel, Apple Silicon)
+- ✅ Windows (download from [releases](https://github.com/chopshop1/ez-term/releases))
 
-### Via Cargo (if you have Rust installed)
+**Automatically:**
+- ✅ Downloads prebuilt binary for your platform
+- ✅ Installs to `~/.local/bin/ez`
+- ✅ Sets up shell integration (zsh/bash)
+- ✅ Configures Ollama host
+- ✅ Adds to your PATH
+
+**No compilation required! Just download and run.**
+
+---
+
+### Alternative Methods
+
+<details>
+<summary>📦 Download Binary Manually</summary>
+
+Download the latest binary for your platform from [Releases](https://github.com/chopshop1/ez-term/releases):
+
+- Linux x86_64: `ez-linux-x86_64.tar.gz`
+- Linux ARM64: `ez-linux-aarch64.tar.gz`
+- macOS Intel: `ez-macos-x86_64.tar.gz`
+- macOS Apple Silicon: `ez-macos-aarch64.tar.gz`
+- Windows: `ez-windows-x86_64.exe.zip`
+
+Then extract and install:
+```bash
+tar xzf ez-*.tar.gz
+mv ez ~/.local/bin/
+chmod +x ~/.local/bin/ez
+```
+</details>
+
+<details>
+<summary>🦀 Build from Source (Requires Rust)</summary>
 
 ```bash
+# Install with cargo
 cargo install ez-cli
+
+# Or build manually
+git clone https://github.com/chopshop1/ez-term.git
+cd ez-term
+cargo build --release
+cp target/release/ez ~/.local/bin/
 ```
 
-Then set up shell integration:
+Then add shell integration:
 ```bash
 # For zsh
 curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/ez.zsh -o ~/.ez.zsh
@@ -44,15 +82,7 @@ echo 'source ~/.ez.zsh' >> ~/.zshrc
 curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/ez.sh -o ~/.ez.sh
 echo 'source ~/.ez.sh' >> ~/.bashrc
 ```
-
-### Manual Build
-
-```bash
-git clone https://github.com/chopshop1/ez-term.git
-cd ez-term
-cargo build --release
-cp target/release/ez ~/.local/bin/
-```
+</details>
 
 ## Quick Start
 
