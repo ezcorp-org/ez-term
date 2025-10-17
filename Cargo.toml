@@ -1,7 +1,16 @@
 [package]
-name = "ez"
+name = "ez-cli"
 version = "0.1.0"
 edition = "2021"
+authors = ["chopshop1"]
+description = "AI-powered CLI command generator with multi-backend LLM support"
+license = "MIT"
+repository = "https://github.com/chopshop1/ez-term"
+homepage = "https://github.com/chopshop1/ez-term"
+documentation = "https://github.com/chopshop1/ez-term/blob/main/README.md"
+readme = "README.md"
+keywords = ["cli", "ai", "llm", "command-generator", "ollama"]
+categories = ["command-line-utilities"]
 
 [[bin]]
 name = "ez"

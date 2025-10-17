@@ -13,14 +13,48 @@ Ask for what you want in natural language, get a safe command you can run.
 - ⚡ **Streaming responses**: See commands as they're generated
 - 💾 **Persistent configuration**: Save your preferred backend and model
 
-## Quick Start
+## Installation
 
-### Installation
+### One-Line Install (Recommended)
 
 ```bash
+curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/install-ez.sh | bash
+```
+
+This will:
+- ✅ Install Rust/Cargo if needed
+- ✅ Build and install `ez` binary
+- ✅ Set up shell integration
+- ✅ Configure Ollama host
+- ✅ Add to your PATH
+
+### Via Cargo (if you have Rust installed)
+
+```bash
+cargo install ez-cli
+```
+
+Then set up shell integration:
+```bash
+# For zsh
+curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/ez.zsh -o ~/.ez.zsh
+echo 'source ~/.ez.zsh' >> ~/.zshrc
+
+# For bash
+curl -sSL https://raw.githubusercontent.com/chopshop1/ez-term/main/ez.sh -o ~/.ez.sh
+echo 'source ~/.ez.sh' >> ~/.bashrc
+```
+
+### Manual Build
+
+```bash
+git clone https://github.com/chopshop1/ez-term.git
+cd ez-term
 cargo build --release
 cp target/release/ez ~/.local/bin/
 ```
+
+## Quick Start
 
 ### Setup for Ollama
 
