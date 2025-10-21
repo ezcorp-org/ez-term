@@ -1,6 +1,6 @@
 [package]
 name = "ez-cli"
-version = "0.5.6"
+version = "0.5.7"
 edition = "2021"
 authors = ["chopshop1"]
 description = "AI-powered CLI command generator with multi-backend LLM support and security validation"
