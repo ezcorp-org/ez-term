@@ -1,0 +1,46 @@
+[package]
+name = "ez-cli"
+version = "0.5.6"
+edition = "2021"
+authors = ["chopshop1"]
+description = "AI-powered CLI command generator with multi-backend LLM support and security validation"
+license = "MIT"
+repository = "https://github.com/ezcorp-org/ez-term"
+homepage = "https://github.com/ezcorp-org/ez-term"
+documentation = "https://github.com/ezcorp-org/ez-term/blob/main/README.md"
+readme = "README.md"
+keywords = ["cli", "ai", "llm", "command-generator", "ollama"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "ez_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ez"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+tokio = { version = "1.41", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sysinfo = "0.33"
+toml = "0.8"
+anyhow = "1.0"
+futures = "0.3"
+tokio-stream = "0.1"
+rustyline = "14.0"
+atty = "0.2"
+dialoguer = "0.11"
+sha2 = "0.10"
+keyring = "2.3"
+regex = "1.10"
+
+[dev-dependencies]
+mockito = "1.2"
+tempfile = "3.8"
+assert_cmd = "2.0"
+predicates = "3.0"
+httpmock = "0.7"

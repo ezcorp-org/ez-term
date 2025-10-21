@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chopshop1.github.io/ez-term/sitemap.xml

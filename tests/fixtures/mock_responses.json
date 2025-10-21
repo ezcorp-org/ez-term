@@ -1,0 +1,26 @@
+{
+  "command_generation": {
+    "find_large_files": {
+      "command": "find . -type f -size +100M -exec ls -lh {} \\;",
+      "description": "Finds files larger than 100MB in current directory and shows their size in human-readable format."
+    },
+    "list_files": {
+      "command": "ls -la",
+      "description": "Lists all files in the current directory with detailed information including permissions, ownership, size, and modification time. The -a flag shows hidden files and the -l flag provides a long format listing."
+    },
+    "disk_usage": {
+      "command": "du -h --max-depth=1 | sort -hr",
+      "description": "Shows disk usage in human-readable format sorted by size, displaying only the top-level directories and files."
+    },
+    "compress_directory": {
+      "command": "tar -czf archive.tar.gz .",
+      "description": "Creates a gzip-compressed tar archive of the current directory."
+    }
+  },
+  "safety_refusals": {
+    "delete_all": {
+      "command": "echo 'Refusing: unsafe operation'",
+      "description": "This operation is unsafe and cannot be previewed."
+    }
+  }
+}
