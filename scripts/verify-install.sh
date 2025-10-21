@@ -20,10 +20,10 @@ else
 fi
 
 VERSION=$(~/.local/bin/ez --version 2>&1)
-if echo "$VERSION" | grep -q "0.5.6"; then
-    echo "✅ PASS: Version is 0.5.6"
+if echo "$VERSION" | grep -q "0.5.7"; then
+    echo "✅ PASS: Version is 0.5.7"
 else
-    echo "❌ FAIL: Expected version 0.5.6, got: $VERSION"
+    echo "❌ FAIL: Expected version 0.5.7, got: $VERSION"
     FAILED=$((FAILED + 1))
 fi
 
@@ -174,9 +174,8 @@ echo "---------------------"
 REQUIRED_DOCS=(
     "README.md"
     "CHANGELOG.md"
-    "FINAL_BEHAVIOR.md"
     "TROUBLESHOOTING.md"
-    "VERIFY_INSTALLATION.md"
+    "RELEASE_PROCESS.md"
 )
 
 for doc in "${REQUIRED_DOCS[@]}"; do
@@ -228,7 +227,7 @@ if [ $FAILED -eq 0 ]; then
     echo "════════════════════════════════════════════════════════════════"
     echo ""
     echo "Installation Status: ✅ VERIFIED"
-    echo "Version: 0.5.6"
+    echo "Version: 0.5.7"
     echo "Test Suite: 47/47 passing"
     echo "Security Features: Active"
     echo ""
@@ -238,7 +237,7 @@ if [ $FAILED -eq 0 ]; then
     echo "2. Reload your shell: source ~/.ez.zsh"
     echo "3. Test: ez 'list files'"
     echo ""
-    echo "See VERIFY_INSTALLATION.md for detailed testing instructions."
+    echo "See README.md for detailed usage instructions."
     echo ""
     exit 0
 else
