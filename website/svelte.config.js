@@ -14,7 +14,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/ez-term' : ''
+			base: process.env.GITHUB_PAGES === 'true' ? '/ez-term' : ''
 		},
 		prerender: {
 			handleMissingId: 'warn',
