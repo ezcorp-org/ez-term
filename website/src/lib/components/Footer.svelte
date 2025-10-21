@@ -24,6 +24,13 @@
 					<li><a href="https://github.com/ezcorp-org/ez-term/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
 				</ul>
 			</div>
+			<div class="footer-section">
+				<h4>Community</h4>
+				<ul>
+					<li><a href="https://discord.ezcorp.org" target="_blank" rel="noopener noreferrer">💬 Discord</a></li>
+					<li><a href="https://github.com/ezcorp-org/ez-term/discussions" target="_blank" rel="noopener noreferrer">Discussions</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="footer-bottom">
 			<p>Made with ❤️ by <strong>EZ Corp</strong></p>
