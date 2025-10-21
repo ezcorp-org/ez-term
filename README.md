@@ -83,11 +83,11 @@ cd ez-term
 # Visit https://ollama.ai to download and install for your platform
 
 # 2. Pull a recommended model
-ollama pull qwen2.5-coder:latest
+ollama pull qwen3-coder:latest
 
 # 3. Configure ez to use Ollama
 ez --set-backend ollama
-ez --set-model qwen2.5-coder:latest
+ez --set-model qwen3-coder:latest
 
 # That's it! Everything runs locally now.
 ```
@@ -250,7 +250,7 @@ echo "compress this directory" | ez
 ### Override Backend/Model
 
 ```bash
-ez -b ollama -m qwen2.5-coder:latest "list processes"
+ez -b ollama -m qwen3-coder:latest "list processes"
 ```
 
 ### List Available Options
@@ -363,7 +363,7 @@ Located at `~/.config/ez-term/config.toml`:
 ```toml
 # Privacy-first configuration (recommended)
 backend = "ollama"
-model = "qwen2.5-coder:latest"
+model = "qwen3-coder:latest"
 ollama_url = "http://localhost:11434"
 
 # Only add these if using cloud providers:
