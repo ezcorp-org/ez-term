@@ -90,7 +90,7 @@ if ! curl -L -o "ez-${PLATFORM}.${ARCHIVE_EXT}" "$DOWNLOAD_URL" 2>/dev/null; the
     echo ""
     echo "📝 Please install manually:"
     echo "   1. Install Rust: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-    echo "   2. Run: curl -sSL https://raw.githubusercontent.com/ezcorp-org/ez-term/main/install-ez.sh | bash"
+    echo "   2. Build from source: git clone https://github.com/ezcorp-org/ez-term && cd ez-term && cargo build --release"
     echo ""
     echo "Or visit: https://github.com/ezcorp-org/ez-term/releases"
     exit 1
