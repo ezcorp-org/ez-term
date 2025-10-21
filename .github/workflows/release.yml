@@ -109,10 +109,18 @@ jobs:
       - name: Display structure
         run: ls -R artifacts
 
+      - name: Flatten artifacts directory
+        run: |
+          cd artifacts
+          find . -type f \( -name "*.tar.gz" -o -name "*.zip" \) -exec mv {} . \;
+          # Remove empty subdirectories
+          find . -type d -empty -delete
+          ls -lh
+
       - name: Generate checksums
         run: |
           cd artifacts
-          find . -type f \( -name "*.tar.gz" -o -name "*.zip" \) -exec sha256sum {} \; | sed 's|./||' | sort > checksums.txt
+          sha256sum *.tar.gz *.zip 2>/dev/null | sort > checksums.txt || true
           cat checksums.txt
 
       - name: Verify checksums
@@ -127,7 +135,10 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: artifacts/**/*
+          files: |
+            artifacts/*.tar.gz
+            artifacts/*.zip
+            artifacts/checksums.txt
           generate_release_notes: true
           draft: false
           prerelease: false
