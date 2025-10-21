@@ -162,7 +162,7 @@ fn test_context_agent_keyword_detection() {
         ("show me git branches", true, &["git", "branch"]),
         ("list docker containers", true, &["docker", "container"]),
         ("npm install package", true, &["npm", "package"]),
-        ("run python script", true, &["python"]),
+        ("run python script", true, &["python", "script"]),
         ("list files", false, &["git", "docker"]),
     ];
 

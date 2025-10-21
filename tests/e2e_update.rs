@@ -55,7 +55,7 @@ fn test_update_command_with_mock_github_api() {
     // Mock binary download (just return some dummy content)
     let download_mock = server.mock(|when, then| {
         when.method(GET)
-            .path_matches(|path: &str| path.contains("/download/"));
+            .path_contains("/download/");
         then.status(200)
             .body(b"fake binary content");
     });
