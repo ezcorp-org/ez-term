@@ -79,8 +79,8 @@ cd ez-term
 **🔒 Recommended: Ollama (100% Local & Private)**
 
 ```bash
-# 1. Install Ollama from https://ollama.ai
-curl -fsSL https://ollama.ai/install.sh | sh
+# 1. Install Ollama
+# Visit https://ollama.ai to download and install for your platform
 
 # 2. Pull a recommended model
 ollama pull qwen2.5-coder:latest
