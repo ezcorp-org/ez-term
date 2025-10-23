@@ -16,7 +16,7 @@
 				<span class="stomp-word stomp-4">Yours.</span>
 			</div>
 		</h1>
-		<p class="hero-subtitle">AI-powered CLI command generator designed to run <strong>completely locally</strong> using Ollama <span style="opacity: 0.7; font-size: 0.9em;">v0.5.7</span></p>
+		<p class="hero-subtitle">AI-powered CLI command generator designed to run <strong>completely locally</strong> using Ollama </p>
 		<p class="hero-description">No data leaves your machine. No telemetry. No cloud dependencies. Just you, your terminal, and AI-powered command generation that respects your privacy.</p>
 
 		<div class="install-command">
