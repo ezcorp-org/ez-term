@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<p>Made with ❤️ by <strong>EZ Corp</strong></p>
+			<p>Made with ❤️ by <a href="https://ezcorp.org" target="_blank" rel="noopener noreferrer"><strong>EZ Corp</strong></a></p>
 		</div>
 	</div>
 </footer>
@@ -96,6 +96,19 @@
 
 	.footer-bottom strong {
 		color: var(--text-primary);
+	}
+
+	.footer-bottom a {
+		color: inherit;
+		transition: color 0.2s ease;
+	}
+
+	.footer-bottom a:hover {
+		color: var(--primary);
+	}
+
+	.footer-bottom a:hover strong {
+		color: var(--primary);
 	}
 
 	@media (max-width: 768px) {
